@@ -1,6 +1,6 @@
 /** Observer pattern */
 export class Observer {
-  notify(index, notification) {
+  notify(index: number, notification: string) {
     console.log(
       'Observer ' +
       index +
@@ -11,13 +11,13 @@ export class Observer {
 }
 
 export class Subject {
-  observers = []
+  observers: Observer[] = [];
 
-  subscribe(observer) {
+  subscribe(observer: Observer) {
     this.observers.push(observer)
   }
 
-  unsubscribe(observer) {
+  unsubscribe(observer: Observer) {
     let index = this.observers.indexOf(observer)
     console.log('Subject: Unsubscribing observer ' + (index + 1))
     if (index > -1) {
@@ -56,11 +56,11 @@ export class Subject {
 
 /** Iterator pattern */
 export class Iterator {
-  counter = -1
-  last
-  collection
+  counter: number = -1
+  last: number
+  collection: number[]
 
-  constructor(collection) {
+  constructor(collection: number[]) {
     this.collection = collection
     this.last = collection.length - 1
   }
