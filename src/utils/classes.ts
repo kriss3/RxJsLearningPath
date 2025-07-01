@@ -1,6 +1,6 @@
 /** Observer pattern */
 export class Observer {
-  notify(index, notification) {
+  notify(index: number, notification: string) {
     console.log(
       'Observer ' +
       index +
@@ -11,7 +11,7 @@ export class Observer {
 }
 
 export class Subject {
-  observers = []
+  observers: Observer[] = [];
 
   subscribe(observer) {
     this.observers.push(observer)
