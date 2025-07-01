@@ -13,11 +13,11 @@ export class Observer {
 export class Subject {
   observers: Observer[] = [];
 
-  subscribe(observer) {
+  subscribe(observer: Observer) {
     this.observers.push(observer)
   }
 
-  unsubscribe(observer) {
+  unsubscribe(observer: Observer) {
     let index = this.observers.indexOf(observer)
     console.log('Subject: Unsubscribing observer ' + (index + 1))
     if (index > -1) {
