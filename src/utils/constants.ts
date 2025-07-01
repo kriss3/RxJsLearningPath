@@ -1,4 +1,4 @@
-import type { Item } from "$utils/interfaces"
+import type { Item } from "../utils/interfaces"
 
 // root paths -------------------------------------------
 const fundamentalRoot = '/0-fundamentals'
