@@ -13,6 +13,8 @@
     subject.subscribe(observer3);
     subject.subscribe(observer4);
 
+    subject.notifyAllObservers();
+
 </script>
 
 <section>
