@@ -15,6 +15,10 @@
 
     subject.notifyAllObservers();
 
+    subject.unsubscribe(observer4);
+
+    subject.notifyAllObservers();
+
 </script>
 
 <section>
