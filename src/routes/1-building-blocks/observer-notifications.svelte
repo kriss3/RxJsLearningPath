@@ -1,6 +1,6 @@
 <script lang="ts">
     import Page from "$lib/Page.svelte";
-    import { Observable, type Observer, type PartialObserver } from "rxjs";
+    import { Observable, type PartialObserver } from "rxjs";
 
     const observer: PartialObserver<string> = {
         next: (value: string) => console.log("Next notification", value)
